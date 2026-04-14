@@ -1,9 +1,10 @@
 import os
-import django
 import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'trade_ai.settings')  # 👈 change
+
+import django
 django.setup()
 
 
@@ -14,7 +15,7 @@ import time
 # ================================
 # ⚙️ CONFIG
 # ================================
-ACCESS_TOKEN = "eyJ0eXAiOiJKV1QiLCJrZXlfaWQiOiJza192MS4wIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiI1RENHRFYiLCJqdGkiOiI2OWRkZjhmYTU5ODYwMTEyNjRiMjhmMjEiLCJpc011bHRpQ2xpZW50IjpmYWxzZSwiaXNQbHVzUGxhbiI6ZmFsc2UsImlhdCI6MTc3NjE1NDg3NCwiaXNzIjoidWRhcGktZ2F0ZXdheS1zZXJ2aWNlIiwiZXhwIjoxNzc2MjA0MDAwfQ.lUm6M24DNrEOXxVfj5XCxnhIWtV_Lr0-95Cg7bH_-WE"
+ACCESS_TOKEN = ACCESS_TOKEN = input("Enter Upstox Access Token: ")
 SYMBOL = "INE839G01010"   # stock
 QUANTITY = 1              # safe start
 
