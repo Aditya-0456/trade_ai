@@ -1,0 +1,14 @@
+import pandas as pd
+from trading.services.strategy_engine import StrategyEngine
+from trading.services.backtester import Backtester
+
+# 👉 Load your data (VERY IMPORTANT)
+df = pd.read_csv("NSE.csv")   # or however you're loading data
+
+strategy = StrategyEngine(symbol="RELIANCE")
+
+bt = Backtester(strategy)
+
+results = bt.run(df)
+
+print(results)
